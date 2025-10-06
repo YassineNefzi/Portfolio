@@ -10,6 +10,7 @@ import {
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
+import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
     const [mode, setMode] = useState<string>('dark');
@@ -27,16 +28,20 @@ function App() {
       }, []);
 
     return (
-    <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-        <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-        <FadeIn transitionDuration={700}>
-            <Main/>
-            <Expertise/>
-            <Timeline/>
-            <Project/>
-            <Contact/>
-        </FadeIn>
-        <Footer />
+    <div className="App">
+      <AnimatedBackground />
+        <div className={`main-container dark-mode`}>
+
+            <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
+            <FadeIn transitionDuration={700}>
+                <Main/>
+                <Expertise/>
+                <Timeline/>
+                <Project/>
+                <Contact/>
+            </FadeIn>
+            <Footer />
+        </div>
     </div>
     );
 }
