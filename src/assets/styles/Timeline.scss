@@ -1,38 +1,212 @@
-.vertical-timeline span {
+.vertical-timeline {
+  padding: 5% 10%;
+
+  span {
     color: white;
     font-family: 'Courier Prime', monospace;
-}
+  }
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element .vertical-timeline-element-date {
+  p {
     color: white;
+    line-height: 1.6;
+  }
 }
 
-.svg-inline--fa {
-    color: white;
-}
+// Override default timeline styles to match your theme
+.vertical-timeline-element-content {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease !important;
+  padding: 25px !important;
 
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.95) !important;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+
+    // Invert text colors on hover
+    h3 {
+      color: #111 !important;
     }
+
+    h4 {
+      color: #333 !important;
+    }
+
+    p {
+      color: #444 !important;
+    }
+
+    span {
+      color: #333 !important;
+    }
+
+    // Add dark border to chips on hover
+    .chip,
+    .MuiChip-root {
+      border: 2px solid #333 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right-color: rgba(255, 255, 255, 0.2) !important;
+
+  .vertical-timeline-element-content:hover & {
+    border-right-color: rgba(255, 255, 255, 0.95) !important;
+  }
+}
+
+.vertical-timeline-element-content h3 {
+  color: white !important;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.vertical-timeline-element-content h4 {
+  color: #f5f5f5 !important;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.vertical-timeline-element-content p {
+  color: #f0f0f0 !important;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin-bottom: 8px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.vertical-timeline-element-content span {
+  color: white !important;
+  font-family: 'Courier Prime', monospace;
+  transition: color 0.3s ease;
+}
+
+// Date styling - keep it simple, just prevent hover effects
+.vertical-timeline-element-date {
+  color: white !important;
+  font-family: 'Courier Prime', monospace !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+  font-size: 1.05rem !important;
+  pointer-events: none !important;
+}
+
+// Add MORE horizontal spacing from icon
+.vertical-timeline--two-columns .vertical-timeline-element--right .vertical-timeline-element-date {
+  padding-left: 50px !important; // Increased from 30px to 50px
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element--left .vertical-timeline-element-date {
+  padding-right: 50px !important; // Increased from 30px to 50px
+}
+
+// Force date to stay white on any hover
+.vertical-timeline-element:hover .vertical-timeline-element-date {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+// Icon styling - no hover effects
+.vertical-timeline-element-icon {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1) !important;
+  transition: none !important;
+  pointer-events: none !important;
+
+  svg {
+    color: white !important;
+    transition: none !important;
+  }
+}
+
+// Timeline line
+.vertical-timeline::before {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+// Chips/tags styling
+.vertical-timeline-element-content .chip,
+.vertical-timeline-element-content .MuiChip-root {
+  color: rgb(39, 40, 34) !important;
+  background-color: white !important;
+  font-size: 0.8rem !important;
+  height: 26px !important;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+
+  span {
+    font-family: 'Courier Prime', monospace;
+    color: rgb(39, 40, 34) !important;
+  }
+}
+
+// Tech stack or skill chips container
+.timeline-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+// Mobile responsiveness
+@media screen and (max-width: 1170px) {
+  .vertical-timeline-element-date {
+    color: white !important;
+    opacity: 1 !important;
+    font-size: 1rem !important;
+    padding: 20px 0 0 0 !important;
+    display: block !important;
+  }
+
+  .vertical-timeline-element-content-arrow {
+    border-right-color: transparent !important;
+    border-left-color: rgba(255, 255, 255, 0.2) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vertical-timeline {
+    padding: 5% 5%;
+  }
+
+  .vertical-timeline-element-content {
+    padding: 20px !important;
+  }
+
+  .vertical-timeline-element-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .vertical-timeline-element-content h4 {
+    font-size: 1.05rem;
+  }
+
+  .vertical-timeline-element-content p {
+    font-size: 0.98rem;
+  }
+
+  .vertical-timeline-element-icon {
+    width: 50px !important;
+    height: 50px !important;
+    left: 50% !important;
+    margin-left: -25px !important;
+
+    svg {
+      font-size: 1.2em !important;
+    }
+  }
 }
