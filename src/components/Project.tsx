@@ -39,14 +39,14 @@ function Project() {
             <div className="project">
                 <a href="https://github.com/Motionless-Solutions" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/Motionless-Solutions" target="_blank" rel="noreferrer"><h2>Motionless Solutions</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
+                <p>A smart home surveillance system based on motion detection, face recognition and Raspberry Pi.</p>
             </div>
             {/* <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>Eurobot 2023</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
-            </div>
-            <div className="project">
+                <a href="https://drive.google.com/file/d/1_9XuyOpnaoLRMgqSIe2JaXV-mPOcCSa0/view" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://drive.google.com/file/d/1_9XuyOpnaoLRMgqSIe2JaXV-mPOcCSa0/view" target="_blank" rel="noreferrer"><h2>Vision Foot</h2></a>
+                <p>An intelligent blind-football coach.</p>
+            </div> */}
+            {/* <div className="project">
                 <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Vision Foot</h2></a>
                 <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
@@ -61,11 +61,11 @@ function Project() {
                 <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
                 <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
             </div> */}
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
-            </div>
+            {/* <div className="project">
+                <a href="https://quickformcv.com/" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://quickformcv.com/" target="_blank" rel="noreferrer"><h2>QuickFormCV</h2></a>
+                <p>An AI-powered resume builder that helps users create professional resumes in minutes, offering expert templates, real-time previews, and intelligent writing suggestions.</p>
+            </div> */}
         </div>
     </div>
     );

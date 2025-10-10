@@ -1,48 +1,109 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
-}
+.contact_wrapper {
+  padding: 5% 10%;
 
-.contact-form {
-  padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
-
-  button:hover {
-    background-color: #5000ca;
+  svg {
+    font-size: 2.5em;
     color: white;
+    transition: color 0.3s ease;
   }
 
-  fieldset {
-    background-color: white;
+  h1 {
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
   }
 }
 
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding-top: 20px;
 }
 
-.form-flex {
+.contact-item {
   display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    svg {
+      color: #111;
+    }
+
+    .contact-details h3 {
+      color: #111;
+    }
+
+    .contact-details a {
+      color: #444;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
 }
 
-.form-flex .MuiFormControl-root {
-  width: 100%;
+.contact-details {
+  flex: 1;
+  min-width: 0;
+
+  h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    font-family: 'DomaineDispNar-Medium', sans-serif;
+    transition: color 0.3s ease;
+  }
+
+  a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    word-break: break-word;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-form {
-  width: 100% !important;
-}
+// Mobile responsiveness
+@media screen and (max-width: 768px) {
+  .contact_wrapper {
+    padding: 5% 5%;
+  }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-item {
+    padding: 20px;
+
+    svg {
+      font-size: 2em;
+    }
+  }
 }
