@@ -22,7 +22,7 @@ function Main() {
 
           {/* ✅ Download CV Button */}
           <a
-            href="/cv.pdf"
+            href={`${process.env.PUBLIC_URL}/cv.pdf`}
             download
             className="download-cv-button"
           >
