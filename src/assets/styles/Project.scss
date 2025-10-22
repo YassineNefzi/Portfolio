@@ -28,6 +28,36 @@
     max-height: 800px;
 }
 
+.project-tech {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .chip {
+    font-size: 0.9rem !important;      // Bigger font
+    height: 32px !important;            // Bigger height
+    background-color: white !important; // White background
+    color: rgb(39, 40, 34) !important;  // Black text
+    font-weight: 500 !important;
+    border: 2px solid transparent !important;
+    transition: all 0.3s ease !important;
+
+    span {
+      font-family: 'Courier Prime', monospace;
+      color: rgb(39, 40, 34);           // Ensure inner text stays black
+    }
+  }
+
+  .chip:hover {
+    border: 2px solid #333 !important;  // Black border on hover
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white !important;
+  }
+}
+
+
+
 .zoom:hover {
     transform: scale(1.05);
 }
